@@ -47,6 +47,13 @@ app.get('/about',(req, res) => {
   });
 });
 
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    pageTitle: 'Portfolio',
+    myPortfolio: 'Ich bin Benedek, ich bin Balogh.'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     error: 'Bad page',
